@@ -1,7 +1,17 @@
 import styled from 'styled-components';
 
+export const ContanierItens = styled.div`
+width: 100%;
+height: 60%;
+background: transparent;
+`;
+
 export const Image = styled.img`
 margin-top: 10px;
+width: 342px;
+height: 354px;
+top: 11px;
+left: 36px;
 `;
 
 export const InputLabel = styled.p`

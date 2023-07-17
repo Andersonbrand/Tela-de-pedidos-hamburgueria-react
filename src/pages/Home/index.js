@@ -4,7 +4,17 @@ import Axios from 'axios';
 
 import Burger from '../../assets/burger-home';
 import Background from '../../assets/background';
+import Container from '../../components/Container';
+import H1 from '../../components/Title';
+import Button from '../../components/Button';
 
+import {
+    ContanierItens,
+    Image,
+    InputLabel,
+    Input,
+  }
+    from "./styles";
 
 function App() {
 
@@ -24,7 +34,7 @@ function App() {
                 <InputLabel>Nome do Cliente</InputLabel>
                 <Input placeholder="Steve Jobs"></Input>
 
-                <Button onclick={addNewUsers}>
+                <Button>
                     Novo Pedido
                 </Button>
             </ContanierItens>
