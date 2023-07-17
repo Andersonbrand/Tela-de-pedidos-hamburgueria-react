@@ -1,19 +1,20 @@
-import React, { useState, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
-import Axios from 'axios';
+import React from 'react';
+//import { useHistory } from 'react-router-dom';
+//import Axios from 'axios';
 
-import Burger from '../../assets/burger-home';
-import Background from '../../assets/background';
-import Container from '../../components/Container';
+import Burger from '../../assets/burger-home.svg';
+import Background from '../../assets/background.svg';
+
 import H1 from '../../components/Title';
 import Button from '../../components/Button';
 
 import {
-    ContanierItens,
+    Container,
+    ContainerItens,
     Image,
     InputLabel,
     Input,
-  }
+}
     from "./styles";
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
             <Image alt="Background-home" src={Background}></Image>
             <Image alt="Tema-da-pagina-home" src={Burger}></Image>
 
-            <ContanierItens>
+            <ContainerItens>
                 <H1>Faça seu Pedido!</H1>
 
                 <InputLabel>Pedido</InputLabel>
@@ -37,7 +38,8 @@ function App() {
                 <Button>
                     Novo Pedido
                 </Button>
-            </ContanierItens>
+            </ContainerItens>
+
         </Container>
     );
 }

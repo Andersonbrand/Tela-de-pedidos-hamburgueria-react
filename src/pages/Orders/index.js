@@ -1,19 +1,18 @@
-import React, { useState, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
-
-import Axios from 'axios';
+import React from 'react';
+//import { useHistory } from 'react-router-dom';
+//import Axios from 'axios';
 
 import BurgerBag from '../../assets/burger-bag.svg';
 import Bin from '../../assets/bin.svg';
-import Container from '../../components/Container';
+
 import H1 from '../../components/Title';
 import Button from '../../components/Button';
 
 import {
-    ContanierItens,
-    Image,
     Container,
-  }
+    ContainerItens,
+    Image,
+}
     from "./styles";
 
 function Orders() {
@@ -24,7 +23,7 @@ function Orders() {
 
             <Image alt="Burger-bag" src={BurgerBag}></Image>
 
-            <ContanierItens>
+            <ContainerItens>
                 <H1>Pedidos</H1>
                 <div>
                     <div>
@@ -41,10 +40,10 @@ function Orders() {
                     <Image id="bin" alt="Bin" src={Bin}></Image>
                 </div>
 
-                <Button onclick={addNewUsers}>
+                <Button>
                     Voltar
                 </Button>
-            </ContanierItens>
+            </ContainerItens>
         </Container>
     );
 }

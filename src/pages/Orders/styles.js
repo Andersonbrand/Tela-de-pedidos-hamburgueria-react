@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const ContanierItens = styled.div`
+export const Container = styled.div`
+background: black;
+`;
+
+export const ContainerItens = styled.div`
 width: 100%;
 height: 60%;
 background: transparent;
@@ -12,14 +16,7 @@ width: 414px;
 height: 896px;
 `;
 
-export const Container = styled.div`
-width: 342px;
-height: 101px;
-border-radius: 14px;
-background: #FFFFFF40;
-margin-top: 15px;
-
-p{
+export const Paragrafo = styled.p`
     background: #FFFFFF;
     font-size: 18px;
     font-weight: 300;
@@ -30,9 +27,9 @@ p{
     height: 21px;
     top: 17px;
     left: 27px;
-}
+`;
 
-h2{
+export const H2 = styled.h2`
     width: 90px;
     height: 21px;
     top: 67px;
@@ -43,7 +40,6 @@ h2{
     letter-spacing: 0px;
     text-align: left;
     background: #FFFFFF;
-}
 `;
 
 export const Bin = styled.img`
