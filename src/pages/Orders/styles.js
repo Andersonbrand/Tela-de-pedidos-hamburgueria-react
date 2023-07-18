@@ -7,7 +7,6 @@ background: black;
 export const ContainerItens = styled.div`
 width: 100%;
 height: 60%;
-background: transparent;
 `;
 
 export const Image = styled.img`
@@ -16,7 +15,7 @@ width: 414px;
 height: 896px;
 `;
 
-export const Paragrafo = styled.p`
+export const P = styled.p`
     background: #FFFFFF;
     font-size: 18px;
     font-weight: 300;
@@ -39,7 +38,7 @@ export const H2 = styled.h2`
     line-height: 21px;
     letter-spacing: 0px;
     text-align: left;
-    background: #FFFFFF;
+    background: #ffffff;
 `;
 
 export const Bin = styled.img`
@@ -47,5 +46,15 @@ export const Bin = styled.img`
     height: 28px;
     top: 39px;
     left: 303px;
+`;
+
+export const Div = styled.div`
+    width: 100%;
+    height: 60%;
+`;
+
+export const Order = styled.div`
+    width: 100%;
+    height: 60%;
 `;
 

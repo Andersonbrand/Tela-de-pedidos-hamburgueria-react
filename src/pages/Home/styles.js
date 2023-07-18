@@ -7,7 +7,6 @@ background: black;
 export const ContainerItens = styled.div`
 width: 100%;
 height: 60%;
-background: transparent;
 `;
 
 export const Image = styled.img`
