@@ -2,18 +2,18 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from './pages/Home';
-import Orders from './pages/Orders';
+import Users from './pages/Users';
 
 function Routes() {
 
     return (
         <Router>
             <Switch>
-                <Route exact pacth="/" component={Home} />
-                <Route exact pacth="/Pedidos" component={Orders} />
+                <Route exact path="/" component={Home} />
+                <Route exact path="/usuarios" component={Users} />
             </Switch>
         </Router>
     );
 }
 
-export default Routes
+export default Routes;

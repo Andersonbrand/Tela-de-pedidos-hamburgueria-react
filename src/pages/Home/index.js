@@ -1,63 +1,58 @@
-import React, { useState, useRef, } from 'react';
+import React, { useState, useRef, } from "react";
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 import Burger from '../../assets/burger-home.svg';
-import Background from '../../assets/background.svg';
 
-import H1 from '../../components/Title';
-import Button from '../../components/Button';
+import H1 from '../../components/Title'
+import ContainerItens from '../../components/ContainerItens'
+import Button from '../../components/Button'
 
 import {
-    Container,
-    ContainerItens,
-    Image,
-    InputLabel,
-    Input,
+  Container,
+  Image,
+  InputLabel,
+  Input,
 }
-    from "./styles";
+  from "./styles";
+
 
 function App() {
-    const [orders, setOrders] = useState([]);
-    const history = useHistory();
-    const inputOrders = useRef();
-    const inputName = useRef();
+  const [users, setUsers] = useState([]);
+  const history = useHistory()
+  const inputName = useRef()
+  const inputAge = useRef()
 
-    async function addNewOrders() {
-        const { data: newOrder } = await axios.post("http//:localhost:3002/orders", {
-            order: inputOrders.current.value,
-            clientName: inputName.current.value,
-            price: inputOrders.current.value,
-            status: inputOrders.current.value,
-        });
+  async function addNewUser() {
 
-        setOrders([...orders, newOrder])
+    const { data: newUser } = await axios.post("http://localhost:3001/users", {
+      name: inputName.current.value,
+      age: inputAge.current.value
+    });
 
-        history.push("/Pedidos")
-    };
+    setUsers([...users, newUser]);
 
-    return (
-        <Container>
+    history.push("/usuarios")
+  };
 
-            <Image alt="Background-home" src={Background}></Image>
-            <Image alt="Tema-da-pagina-home" src={Burger}></Image>
+  return (
+    <Container>
+      <Image alt="logo-image" src={Burger}></Image>
+      <ContainerItens>
+        <H1>Pedidos!</H1>
 
-            <ContainerItens>
-                <H1>Faça seu Pedido!</H1>
+        <InputLabel>Pedido</InputLabel>
+        <Input ref={inputName} placeholder="1 Coca-cola, 1 X-salada"></Input>
 
-                <InputLabel>Pedido</InputLabel>
-                <Input ref={inputOrders} placeholder="1 Coca-Cola, 1 X-Salada"></Input>
+        <InputLabel>Nome do cliente</InputLabel>
+        <Input ref={inputAge} placeholder="Steve Jobs"></Input>
 
-                <InputLabel>Nome do Cliente</InputLabel>
-                <Input placeholder="Steve Jobs"></Input>
-
-                <Button onclick={addNewOrders}>
-                    Novo Pedido
-                </Button>
-            </ContainerItens>
-
-        </Container>
-    );
+        <Button onClick={addNewUser}>
+          Novo pedido
+        </Button>
+      </ContainerItens>
+    </Container>
+  );
 }
 
 export default App

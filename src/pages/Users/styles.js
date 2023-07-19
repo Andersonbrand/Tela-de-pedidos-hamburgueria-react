@@ -9,6 +9,7 @@ export const Container = styled.div`
     align-items: center;
     gap: 40px;
     height: 100%;
+    min-height: 100vh;
 
 `;
 
@@ -17,17 +18,10 @@ export const Image = styled.img`
 
 `;
 
-export const InputLabel = styled.p`
-    letter-spacing:-0.408px;
-    color: #EEEEEE;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-    margin-left: 25px;
-
-`;
-
-export const Input = styled.input`
+export const User = styled.ul`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     border-radius: 14px;
     box-shadow: 0px 4px 4px 0px #00000040;
     background: #FFFFFF40;
@@ -35,13 +29,19 @@ export const Input = styled.input`
     height: 58px;
     border: none;
     outline: none;
-    padding-left: 50px;
-    font-size: 20px;
-    font-weight: normal;
-    line-height: 24px;
-    letter-spacing: 0px;
-    text-align: left;
-    color: #FFFFFF;
-    margin-bottom: 34px;
+    margin-top: 20px;
 
-`;
+    p{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 28px;
+        color: #ffffff;
+    }
+
+    Button{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+`

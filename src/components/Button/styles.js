@@ -1,17 +1,24 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-width: Hug (342px);
-height: Hug (68px);
-top: 778px;
-left: 36px;
-gap: 14px;
-padding: 0px 113px 0px 113px;
-border: none;
-background: ${props => props.isBack ? 'black' : '#D93856'};
-cursor: pointer;
-
-&:hover{
+    width: 342px;
+    height: 68px;
+    margin-top: 777px;
+    border-radius: 14px;
+    background: ${props => props.isBack ? 'black' : '#D93856'};
+    border: none;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    &:hover{
         opacity: 0.8;
     }
 
@@ -19,4 +26,3 @@ cursor: pointer;
         opacity: 0.5;
     }
 `;
-
