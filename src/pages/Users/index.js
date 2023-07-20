@@ -12,7 +12,14 @@ import Button from '../../components/Button'
 import {
   Container,
   Image,
-  User
+  User,
+  Containerbox,
+  Containertext,
+  Containerp,
+  Containerh2,
+  Containerimg,
+  Paragrafo,
+  Subtitle
 }
   from "./styles";
 
@@ -20,22 +27,22 @@ function Users() {
   const [users, setUsers] = useState([]);
   const history = useHistory();
 
-  useEffect(() => {
-    async function fetchUsers() {
-      const { data: newUsers } = await axios.get("http://localhost:3001/users");
+  // useEffect(() => {
+  // async function fetchUsers() {
+  //const { data: newUsers } = await axios.get("http://localhost:3001/users");
 
-      setUsers(newUsers);
-    }
+  //setUsers(newUsers);
+  //}
 
-    fetchUsers();
-  }, []);
+  //fetchUsers();
+  //}, []);
 
-  async function deleteUser(userId) {
-    await axios.delete(`http://localhost:3001/users/${userId}`);
-    const newUsers = users.filter((user) => user.id !== userId);
+  //async function deleteUser(userId) {
+  /// await axios.delete(`http://localhost:3002/orders/${userId}`);
+  // const newUsers = users.filter((user) => user.id !== userId);
 
-    setUsers(newUsers)
-  }
+  //setUsers(newUsers)
+  //}
 
   function goBackPage() {
     history.push("/");
@@ -45,18 +52,48 @@ function Users() {
     <Container>
       <Image alt="burger-bag" src={Burgerbag}></Image>
       <ContainerItens isBlur={true}>
-        <H1>Pedidos!</H1>
+        <H1>Pedidos</H1>
 
-        <ul>
-          {users.map((user =>
-            <User key={user.id}>
-              <p>{user.name}</p> - <p>{user.age}</p>
-              <button onClick={() => deleteUser(user.id)}>
-                <img src={Trash} alt="lata-de-lixo" />
-              </button>
-            </User>
-          ))}
-        </ul>
+        <Containerbox >
+
+          <Containertext>
+
+            <Containerp>
+              <Paragrafo placeholder="1 Coca-cola, 1 X-salada"></Paragrafo>
+            </Containerp>
+
+            <Containerh2>
+              <Subtitle placeholder="Steve Jobs"></Subtitle>
+            </Containerh2>
+
+          </Containertext>
+
+          <Containerimg>
+            <Image src={Trash}></Image>
+          </Containerimg>
+
+        </Containerbox>
+
+
+        <Containerbox>
+
+          <Containertext>
+
+            <Containerp>
+              <Paragrafo placeholder="1 Coca-cola, 1 X-salada"></Paragrafo>
+            </Containerp>
+
+            <Containerh2>
+              <Subtitle placeholder="Steve Jobs"></Subtitle>
+            </Containerh2>
+
+          </Containertext>
+
+          <Containerimg>
+            <Image src={Trash}></Image>
+          </Containerimg>
+
+        </Containerbox>
 
         <Button isBack={true} onClick={goBackPage}>
           Voltar

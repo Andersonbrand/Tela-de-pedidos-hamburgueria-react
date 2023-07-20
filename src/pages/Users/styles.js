@@ -44,4 +44,44 @@ export const User = styled.ul`
         border: none;
         cursor: pointer;
     }
-`
+`;
+
+export const Containerbox = styled.div`
+        background: #FFFFFF40;
+        display: flex;
+        justify-content: flex-start;
+`;
+
+export const Containertext = styled.div`
+        background: #FFFFFF40;
+        display: flex;
+        justify-content: flex-start;
+`;
+
+export const Containerp = styled.div`
+        background: #FFFFFF40;
+        display: flex;
+        justify-content: flex-start;
+`;
+
+export const Containerh2 = styled.div`
+        background: #FFFFFF40;
+        display: flex;
+        justify-content: flex-start;
+`;
+
+export const Containerimg = styled.div`
+        background: #FFFFFF40;
+        display: flex;
+        justify-content: flex-start;
+`;
+
+export const Paragrafo = styled.p`
+color: white;
+font-size: 15px;
+`;
+
+export const Subtitle = styled.h2`
+color: white;
+font-size: 25px;
+`;

@@ -40,16 +40,16 @@ function App() {
     <Container>
       <Image alt="logo-image" src={Burger}></Image>
       <ContainerItens>
-        <H1>Pedidos!</H1>
+        <H1>Faça seu pedido!</H1>
 
         <InputLabel>Pedido</InputLabel>
         <Input  placeholder="1 Coca-cola, 1 X-salada"></Input>
 
-        <InputLabel>Nome do cliente</InputLabel>
+        <InputLabel>Nome do Cliente</InputLabel>
         <Input  placeholder="Steve Jobs"></Input>
 
         <Button onClick={addNewOrder}>
-          Novo pedido
+         Novo Pedido
         </Button>
       </ContainerItens>
     </Container>

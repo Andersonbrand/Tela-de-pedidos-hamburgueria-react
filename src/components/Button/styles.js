@@ -4,7 +4,7 @@ export const Button = styled.button`
     width: 360px;
     height: 68px;
     margin-top: 40px;
-    background: ${props => props.isBack ? 'black' : '#D93856'};
+    background: ${props => props.isBack ? '#FFFFFF24' : '#D93856'};
     border: none;
     font-family: Roboto;
     font-size: 17px;
