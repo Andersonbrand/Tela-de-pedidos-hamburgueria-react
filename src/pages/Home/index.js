@@ -18,21 +18,22 @@ import {
 
 
 function App() {
-  const [users, setUsers] = useState([]);
+  const [orders, setOrders] = useState([]);
   const history = useHistory()
-  const inputName = useRef()
-  const inputAge = useRef()
+  const inputOrder = useRef()
+  const inputClientName = useRef()
+  const inputPrice = useRef()
+  const inputStatus = useRef()
 
-  async function addNewUser() {
+  async function addNewOrder() {
 
-    const { data: newUser } = await axios.post("http://localhost:3001/users", {
-      name: inputName.current.value,
-      age: inputAge.current.value
+    const { data: newOrder } = await axios.post("http://localhost:3002/orders", {
+      
     });
 
-    setUsers([...users, newUser]);
+    setOrders([...orders, newOrder]);
 
-    history.push("/usuarios")
+    history.push("/pedidos")
   };
 
   return (
@@ -42,12 +43,12 @@ function App() {
         <H1>Pedidos!</H1>
 
         <InputLabel>Pedido</InputLabel>
-        <Input ref={inputName} placeholder="1 Coca-cola, 1 X-salada"></Input>
+        <Input  placeholder="1 Coca-cola, 1 X-salada"></Input>
 
         <InputLabel>Nome do cliente</InputLabel>
-        <Input ref={inputAge} placeholder="Steve Jobs"></Input>
+        <Input  placeholder="Steve Jobs"></Input>
 
-        <Button onClick={addNewUser}>
+        <Button onClick={addNewOrder}>
           Novo pedido
         </Button>
       </ContainerItens>

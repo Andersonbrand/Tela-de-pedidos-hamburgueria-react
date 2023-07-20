@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-    width: 342px;
+    width: 360px;
     height: 68px;
-    margin-top: 777px;
-    border-radius: 14px;
+    margin-top: 40px;
     background: ${props => props.isBack ? 'black' : '#D93856'};
     border: none;
     font-family: Roboto;

@@ -13,35 +13,31 @@ export const Container = styled.div`
 `;
 
 export const Image = styled.img`
-    margin-top: 30px;
+    margin-top: 15px;
 
 `;
 
 export const InputLabel = styled.p`
-    letter-spacing:-0.408px;
+    letter-spacing: 0.700px;
     color: #EEEEEE;
-    font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-    margin-left: 25px;
-
+    margin-left: 10px;
 `;
 
 export const Input = styled.input`
     border-radius: 14px;
     box-shadow: 0px 4px 4px 0px #00000040;
     background: #FFFFFF40;
-    width: 342px;
-    height: 58px;
+    width: 360px;
+    height: 60px;
     border: none;
     outline: none;
-    padding-left: 50px;
+    padding-left: 15px;
     font-size: 20px;
     font-weight: normal;
     line-height: 24px;
     letter-spacing: 0px;
-    text-align: left;
     color: #FFFFFF;
     margin-bottom: 34px;
-
 `;

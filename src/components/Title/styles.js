@@ -8,6 +8,6 @@ export const H1 = styled.h1`
     letter-spacing: 0px;
     text-align: center;
     color: #ffffff;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 
 `;
