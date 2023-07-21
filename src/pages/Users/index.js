@@ -12,7 +12,6 @@ import Button from '../../components/Button'
 import {
   Container,
   Image,
-  User,
   Containerbox,
   Containertext,
   Containerp,
@@ -27,22 +26,22 @@ function Users() {
   const [users, setUsers] = useState([]);
   const history = useHistory();
 
-  // useEffect(() => {
-  // async function fetchUsers() {
-  //const { data: newUsers } = await axios.get("http://localhost:3001/users");
+  useEffect(() => {
+    async function fetchUsers() {
+      const { data: newUsers } = await axios.get("http://localhost:3001/users");
 
-  //setUsers(newUsers);
-  //}
+      setUsers(newUsers);
+    }
 
-  //fetchUsers();
-  //}, []);
+    fetchUsers();
+  }, []);
 
-  //async function deleteUser(userId) {
-  /// await axios.delete(`http://localhost:3002/orders/${userId}`);
-  // const newUsers = users.filter((user) => user.id !== userId);
+  async function deleteUser(userId) {
+    await axios.delete(`http://localhost:3002/orders/${userId}`);
+    const newUsers = users.filter((user) => user.id !== userId);
 
-  //setUsers(newUsers)
-  //}
+    setUsers(newUsers)
+  }
 
   function goBackPage() {
     history.push("/");
@@ -59,11 +58,11 @@ function Users() {
           <Containertext>
 
             <Containerp>
-              <Paragrafo placeholder="1 Coca-cola, 1 X-salada"></Paragrafo>
+              <Paragrafo>1 Coca-cola, 1 X-salada</Paragrafo>
             </Containerp>
 
             <Containerh2>
-              <Subtitle placeholder="Steve Jobs"></Subtitle>
+              <Subtitle>Steve Jobs</Subtitle>
             </Containerh2>
 
           </Containertext>
@@ -80,11 +79,11 @@ function Users() {
           <Containertext>
 
             <Containerp>
-              <Paragrafo placeholder="1 Coca-cola, 1 X-salada"></Paragrafo>
+              <Paragrafo>1 Coca-cola, 1 X-salada</Paragrafo>
             </Containerp>
 
             <Containerh2>
-              <Subtitle placeholder="Steve Jobs"></Subtitle>
+              <Subtitle>Steve Jobs</Subtitle>
             </Containerh2>
 
           </Containertext>

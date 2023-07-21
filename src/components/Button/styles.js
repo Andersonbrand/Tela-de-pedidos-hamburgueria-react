@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-    width: 360px;
+    width: 342px;
     height: 68px;
     margin-top: 40px;
     background: ${props => props.isBack ? '#FFFFFF24' : '#D93856'};
