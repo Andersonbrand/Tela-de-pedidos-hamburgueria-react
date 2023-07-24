@@ -24,16 +24,14 @@ function App() {
   const inputClientName = useRef()
 
   async function addNewOrder() {
-    const data = await axios.post("http://localhost:3001/orders", {
+    const { data: newOrder } = await axios.post("http://localhost:3001/orders", {
       order: inputOrders.current.value,
-      clientName: inputClientName.current.value,
+      clientName: inputClientName.current.value
     });
 
-    setOrders([...orders]);
+    setOrders([...orders, newOrder]);
 
     history.push("/pedidos")
-
-    console.log(data)
   };
 
 

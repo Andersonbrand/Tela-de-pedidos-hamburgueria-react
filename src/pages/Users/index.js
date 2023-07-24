@@ -22,25 +22,25 @@ import {
 }
   from "./styles";
 
-function Users() {
-  const [users, setUsers] = useState([]);
+function Orders() {
+  const [orders, setOrders] = useState([]);
   const history = useHistory();
 
   useEffect(() => {
-    async function fetchUsers() {
-      const { data: newUsers } = await axios.get("http://localhost:3001/users");
+    async function fetchOrders() {
+      const { data: newOrders } = await axios.get("http://localhost:3001/orders");
 
-      setUsers(newUsers);
+      setOrders(newOrders);
     }
 
-    fetchUsers();
+    fetchOrders();
   }, []);
 
-  async function deleteUser(userId) {
-    await axios.delete(`http://localhost:3002/orders/${userId}`);
-    const newUsers = users.filter((user) => user.id !== userId);
+  async function deleteOrder(orderId) {
+    await axios.delete(`http://localhost:3001/orders/${orderId}`);
+    const newOrder = orders.filter((order) => order.id !== orderId);
 
-    setUsers(newUsers)
+    setOrders(newOrder)
   }
 
   function goBackPage() {
@@ -58,17 +58,17 @@ function Users() {
           <Containertext>
 
             <Containerp>
-              <Paragrafo>1 Coca-cola, 1 X-salada</Paragrafo>
+              <Paragrafo></Paragrafo>
             </Containerp>
 
             <Containerh2>
-              <Subtitle>Steve Jobs</Subtitle>
+              <Subtitle></Subtitle>
             </Containerh2>
 
           </Containertext>
 
           <Containerimg>
-            <Image src={Trash}></Image>
+            <Image src={Trash} onclick={deleteOrder}></Image>
           </Containerimg>
 
         </Containerbox>
@@ -77,19 +77,19 @@ function Users() {
         <Containerbox>
 
           <Containertext>
-
+            
             <Containerp>
-              <Paragrafo>1 Coca-cola, 1 X-salada</Paragrafo>
+              <Paragrafo></Paragrafo>
             </Containerp>
 
             <Containerh2>
-              <Subtitle>Steve Jobs</Subtitle>
+              <Subtitle></Subtitle>
             </Containerh2>
 
           </Containertext>
 
           <Containerimg>
-            <Image src={Trash}></Image>
+            <Image src={Trash} onclick={deleteOrder}></Image>
           </Containerimg>
 
         </Containerbox>
@@ -102,4 +102,4 @@ function Users() {
   );
 }
 
-export default Users
+export default Orders
